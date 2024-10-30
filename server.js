@@ -31,6 +31,8 @@ server.use(bodyParser.json());
 mongoose.connect(process.env.DB_LOCATION, { autoIndex: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
+    
+      
 
  // JWT Middleware
 const verifyToken = (req, res, next) => {
